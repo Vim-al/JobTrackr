@@ -10,6 +10,7 @@ import mongoose from "mongoose";
 import errorHandlerMiddleware from "./middleware/errorHandlerMiddleware.js";
 import { authenticateUser } from "./middleware/authMiddleware.js";
 import cookieParser from "cookie-parser";
+import userRouter from "./routes/userRouter.js";
 
 if (process.env.NODE_ENV == "development") {
   app.use(morgan("dev"));
@@ -28,6 +29,7 @@ app.post("/api/v1/test", (req, res) => {
 });
 
 app.use("/api/v1/jobs", authenticateUser, jobRouter);
+app.use("/api/v1/users", authenticateUser, userRouter);
 app.use("/api/v1/auth", authRouter);
 
 app.use("*", (req, res) => {
