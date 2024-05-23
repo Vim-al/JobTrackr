@@ -19,7 +19,7 @@ if (process.env.NODE_ENV == "development") {
 app.use(cookieParser());
 app.use(express.json());
 
-app.get("/", (req, res) => {
+app.get("/api/v1/test", (req, res) => {
   res.send("Hello world");
 });
 
