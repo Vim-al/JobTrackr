@@ -14,10 +14,10 @@ const Landing = () => {
             job <span>tracking</span> app
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            quae eius beatae asperiores, reprehenderit adipisci. Harum aliquam
-            neque eius temporibus reiciendis iusto fugit, dignissimos sit ad
-            inventore eos, accusamus cumque.
+            A MERN stack job tracking Web Application featuring JWT token
+            authentication. Users add, search and monitor job applications, view
+            stats like pending applications and interviews with a dark mode
+            option.
           </p>
           <Link to="/register" className="btn register-link">
             Register
