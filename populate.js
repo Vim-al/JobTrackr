@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 import Job from "./models/JobModel.js";
-import User from "./models/userModel.js";
+import User from "./models/UserModel.js";
 try {
   await mongoose.connect(process.env.MONGO_URL);
   const user = await User.findOne({ email: "vimal@gmail.com" });
